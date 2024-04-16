@@ -3,12 +3,12 @@
     align-items: center;
     justify-content: space-between;
     grid-template-columns: 1fr 142px 1fr;
-    padding: 92px 46px;
+    padding: 91px 42px 92px 50px;
 }
 
 .header__nav .nav__list {
     display: flex;
-    gap: 31px;
+    gap: 32px;
     font-size: 18px;
     line-height: 21.3px;
 }
@@ -20,16 +20,15 @@
 }
 
 .nav__link.active {
-    text-decoration: none;
     border-bottom: 0;
 }
 
 
-.header__nav .list__item {
+.header__nav .nav__list-item {
     list-style-type: circle;
 }
 
-.header__nav .list__item:first-child {
+.header__nav .nav__list-item:first-child {
     list-style-type: none;
 }
 
@@ -47,6 +46,7 @@
     justify-self: end;
     font-size: 18px;
     line-height: 24.3px;
+    font-style: normal;
 }
 
 .phone, .email {
@@ -59,22 +59,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 757px;
     background:
     linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ), center / cover no-repeat url(../images/cover.jpg);
     color: #fff;
-    position: relative;
-    right: 5px;
 }
 
 .banner__title {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    padding: 166px 20px 0 49px;
+    padding: 163px 20px 74px 50px;
     font-size: 100px;
     font-weight: 700;
     text-transform: uppercase;
@@ -84,7 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 49px 51px 49px 77px;
+    padding: 51px 50px 50px 77px;
 }
 
 .banner__subtitle {
@@ -103,7 +100,8 @@
     color: #fff;
     line-height: 28px;
     font-weight: 400;
-    padding: 10px 30px;
+    padding: 10px 32px;
+    font-family: inherit;
 }
 
 .section__title {
@@ -114,43 +112,28 @@
 }
 
 .lots {
-    margin: 184px 0 0;
+    margin: 182px 0 0;
 }
 
 .lots__title {
-    margin-left: 60px;
+    margin-left: 64px;
 }
 
 .lots__content {
     display: flex;
     justify-content: space-between;
-    margin: 24px 28px 31px 20px;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 26px 24px 30px;
 }
 
 .lot__container {
-    position: relative;
     width: 334px;
-    background-size: cover;
-    background-position: top 0 right 50%;
-    background-repeat: no-repeat;
+    min-height: 563px;
+    flex-grow: 1;
 }
 
-.lot__bg {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    z-index: 0;
-    z-index: 1;
-}
-
-.lot__filter {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, .6);
-    z-index: 1;
-}
-
-.first-lot_bg { 
+.card_type_film { 
     background:
     linear-gradient(
       rgba(0, 0, 0, 0.6),
@@ -159,7 +142,7 @@
     center / cover no-repeat url(../images/card-lot-01.jpg);
 }
 
-.second-lot_bg {
+.card_type_book {
     background:
     linear-gradient(
       rgba(0, 0, 0, 0.6),
@@ -168,7 +151,7 @@
     center / cover no-repeat url(../images/card-lot-02.jpg);
 }
 
-.third-lot_bg {
+.card_type_picture {
     background:
     linear-gradient(
       rgba(0, 0, 0, 0.6),
@@ -178,15 +161,13 @@
 }
 
 .lot__content {
-    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    padding: 52px 39px 46px;
+    padding: 51px 40px 46px;
     color: #fff;
-    z-index: 2;
 }
 
 .lot__title {
@@ -198,9 +179,8 @@
 }
 
 .lots__more {
-    position: relative;
-    left: 59px;
     display: inline-block;
+    margin-left: 64px;
     border-bottom: 1px solid #000;
     font-size: 20px;
     line-height: 23.48px;
@@ -215,14 +195,13 @@
 
 .about {
     display: grid;
-    margin: 181px 32px 150px 66px;
-    gap: 6px 72px;
+    margin: 182px 29px 150px 71px;
+    gap: 9px 72px;
     grid-template-columns: 240px auto;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas: 
     "logo about-title"
-    ". first-p"
-    ". second-p";
+    ". about-description";
 }
 
 .about__circle {
@@ -239,16 +218,14 @@
 .about__title {
     grid-area: about-title;
     align-self: center;
-    padding-top: 10px;
+    padding-top: 12px;
 }
 
-.first-p {
-    grid-area: first-p;
-}
-
-.second-p {
-    grid-area: second-p;
-    margin-top: 20px;
+.about__description {
+    grid-area: about-description;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .text_center {
@@ -259,73 +236,48 @@
     text-align: right;
 }
 
-.it {
-    letter-spacing: 30px;
+.banner__title-word:first-child {
+    letter-spacing: 3px;
+}
+.banner__title-word:first-child::after {
+    content: 'но';
+    letter-spacing: 60px;
 }
 
-.it__part {
+.banner__title-word:nth-child(2) {
+    letter-spacing: -35px;
+    padding-right: 31px;
+    /* padding-top: 4px; */
+}
+
+.banner__title-word:nth-child(2)::before {
+    content: 'те';
+    letter-spacing: 32px;
+}
+
+.banner__title-word:nth-child(2)::after {
+    content: 'бе';
     letter-spacing: 59px;
 }
 
-.you {
-    letter-spacing: -26px;
-}
-
-.te {
+.banner__title-word:last-child {
+    width: fit-content;
     letter-spacing: 28px;
+    margin: 0px 2px 0 auto;
 }
 
-.you__part {
-    letter-spacing: 61px;
-    padding-right: 27px;
+.banner__title-word:last-child::before {
+    content: 'н';
+    margin-right: -16px;
 }
 
-.need {
-    letter-spacing: 29px;
+.banner__title-word:last-child::after {
+    content: 'о';
+    margin-left: -49px;
 }
 
-.n {
-    letter-spacing: 59px;
-}
-
-.need__part {
-    letter-spacing: 31px;
-}
-
-.text_letter-60 {
-    letter-spacing: 0.6rem;
-}
-
-.text_letter-30 {
-    letter-spacing: 0.3rem;
-}
-
-.text_letter-4 {
-    letter-spacing: 0.04rem;
-}
-
-.text_letter-3 {
-    letter-spacing: 0.03rem;
-}
-
-.text_letter-2 {
-    letter-spacing: 0.02rem;
-}
-
-.text_letter-13 {
-    letter-spacing: 0.13rem;
-}
-
-.text_letter-1 {
+.text_acsent {
     letter-spacing: 0.01rem;
-}
-
-.text_letter--1 {
-    letter-spacing: -0.01rem;
-}
-
-.word-spacing {
-    word-spacing: -2px;
 }
 
 .about__logo {
@@ -335,7 +287,7 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 30px 55px 0 45px;
+    padding: 30px 50px 86px 51px;
 }
 
 .footer .nav__list {
@@ -345,8 +297,12 @@
     padding-left: 40px;
 }
 
-.footer .list__item {
+.footer .nav__list-item {
     list-style-type: none;
+}
+
+.footer .nav__list-item.active {
+    text-decoration: none;
 }
 
 .social__block {
