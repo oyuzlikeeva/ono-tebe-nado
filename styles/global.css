@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   width: 1100px;
   margin: 0 auto;
@@ -27,6 +31,11 @@ blockquote {
 
 a {
   color: inherit;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 img {

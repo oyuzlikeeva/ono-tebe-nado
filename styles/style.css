@@ -1,1 +1,315 @@
-/* место для вашего кода */
+.header {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 142px 1fr;
+    padding: 91px 42px 92px 50px;
+}
+
+.header__nav .nav__list {
+    display: flex;
+    gap: 32px;
+    font-size: 18px;
+    line-height: 21.3px;
+}
+
+.nav__link {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #000;
+}
+
+.nav__link.active {
+    border-bottom: 0;
+}
+
+
+.header__nav .nav__list-item {
+    list-style-type: circle;
+}
+
+.header__nav .nav__list-item:first-child {
+    list-style-type: none;
+}
+
+.header__logo {
+    width: 138px;
+}
+
+.header__contacts {
+    padding-right: 45px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-self: end;
+    font-size: 18px;
+    line-height: 24.3px;
+    font-style: normal;
+}
+
+.phone, .email {
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), center / cover no-repeat url(../images/cover.jpg);
+    color: #fff;
+}
+
+.banner__title {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 163px 20px 74px 50px;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.banner__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 51px 50px 50px 77px;
+}
+
+.banner__subtitle {
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    word-spacing: 19px;
+}
+
+.banner__button {
+    border: 1px solid #fff;
+    background: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #fff;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 10px 32px;
+}
+
+.section__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.96px;
+    text-transform: uppercase;
+}
+
+.lots {
+    margin: 182px 0 0;
+}
+
+.lots__title {
+    margin-left: 64px;
+}
+
+.lots__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 26px 24px 30px;
+}
+
+.lot__container {
+    width: 334px;
+    min-height: 563px;
+    flex-grow: 1;
+}
+
+.card_type_film {
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.6), 
+            rgba(0, 0, 0, 0.6)
+        ), 
+        center / cover no-repeat url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ), 
+        center / cover no-repeat url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ), 
+        center / cover no-repeat url(../images/card-lot-03.jpg);
+    }
+
+.lot__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 51px 40px 46px;
+    color: #fff;
+}
+
+.lot__title {
+    font-size: 22px;
+    line-height: 26.4px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.lots__more {
+    display: inline-block;
+    margin-left: 64px;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+    line-height: 23.48px;
+    text-decoration: none;
+}
+
+.text_description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about {
+    display: grid;
+    margin: 182px 29px 150px 71px;
+    gap: 9px 72px;
+    grid-template-columns: 240px auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "logo about-title"
+    ". about-description";
+}
+
+.about__circle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: #000;
+    grid-area: logo;
+}
+
+.about__title {
+    grid-area: about-title;
+    align-self: center;
+    padding-top: 12px;
+}
+
+.about__description {
+    grid-area: about-description;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.banner__title-word:first-child {
+    letter-spacing: 3px;
+}
+.banner__title-word:first-child::after {
+    content: 'но';
+    letter-spacing: 60px;
+}
+
+.banner__title-word:nth-child(2) {
+    letter-spacing: -35px;
+    padding-right: 31px;
+    /* padding-top: 4px; */
+}
+
+.banner__title-word:nth-child(2)::before {
+    content: 'те';
+    letter-spacing: 32px;
+}
+
+.banner__title-word:nth-child(2)::after {
+    content: 'бе';
+    letter-spacing: 59px;
+}
+
+.banner__title-word:last-child {
+    width: fit-content;
+    letter-spacing: 28px;
+    margin: 0px 2px 0 auto;
+}
+
+.banner__title-word:last-child::before {
+    content: 'н';
+    margin-right: -16px;
+}
+
+.banner__title-word:last-child::after {
+    content: 'о';
+    margin-left: -49px;
+}
+
+.text_acsent {
+    letter-spacing: 0.01rem;
+}
+
+.about__logo {
+    width: 148px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px 86px 51px;
+}
+
+.footer .nav__list {
+    text-align: center;
+    font-size: 18px;
+    line-height: 21.3px;
+    padding-left: 40px;
+}
+
+.footer .nav__list-item {
+    list-style-type: none;
+}
+
+.footer .nav__list-item.active {
+    text-decoration: none;
+}
+
+.social__block {
+    display: flex;
+    gap: 48px;
+
+}
+
+.social__img {
+    width: 48px;
+}
