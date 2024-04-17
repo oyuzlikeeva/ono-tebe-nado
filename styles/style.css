@@ -134,27 +134,30 @@
 
 .card_type_film {
     background: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        linear-gradient(
+            rgba(0, 0, 0, 0.6), 
+            rgba(0, 0, 0, 0.6)
+        ), 
         center / cover no-repeat url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
     background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ), 
-    center / cover no-repeat url(../images/card-lot-02.jpg);
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ), 
+        center / cover no-repeat url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
     background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ), 
-    center / cover no-repeat url(../images/card-lot-03.jpg);
-}
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ), 
+        center / cover no-repeat url(../images/card-lot-03.jpg);
+    }
 
 .lot__content {
     height: 100%;
